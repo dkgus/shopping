@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
 
     email: {
         type: String,
-        trim : ture,
+        trim : true,
         unique: 1
     },
 
@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
         default: 0
     },
 
-    image : string,
+    image : String,
     
     token : {
         type: String
