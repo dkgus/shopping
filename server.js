@@ -4,15 +4,14 @@ const port = 3030;
 const methodOverride = require("method-override");
 const User = require("./models/User"); 
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+
+
+const config = require("./config/key");
 
 
 
-
-
-dotenv.config();
 mongoose
-  .connect(process.env.MONGO_DB, {
+  .connect(config.mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
